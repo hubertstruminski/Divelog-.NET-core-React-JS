@@ -1,0 +1,265 @@
+{
+    "header": {
+        "home": "Home",
+        "guide": "Guide",
+        "aboutMe": "About me",
+        "donate": "Donate",
+        "contact": "Contact",
+        "login": "Log In",
+        "logout": "Logout"
+    },
+    "login": {
+        "login": "Log In",
+        "facebook-btn": "Log in with facebook"
+    },
+    "home": {
+        "built": "Built for divers",
+        "step": "Step into the depths of the ocean.",
+        "let": "Join to us!",
+        "fb-title": "Facebook interface",
+        "fb-paragraph": "Share your impressions with the dive world stay in touch with other divers thanks to Facebook API. Talk with divers, add posts, share photos, comment and participate in groups. Our interface is completely secure.",
+        "logbook": "Logbook",
+        "logbook-paragraph": "Stay updated. No worries, all you need is internet access and you don't have to worry about where to save your next dive. Divelog supports the storage of dive data in our database. You can also generate dynamic PDF.",
+        "maps": "Google maps",
+        "maps-paragraph": "Divelog allows you to mark locations on maps from Google. Check your dive location history today and share this beautiful map with the rest of the dive world.",
+        "computer": "Dive computer",
+        "computer-paragraph": "Divelog allows you to create a dive plan. Log in and provide all the required data and you will receive a fully comprehensive diving plan. You can also generate dynamic PDF.",
+        "progress": "The feature in progress...",
+        "forum": "Forum",
+        "forum-paragraph": "If you have important information to provide to the dive world, you can use the available forum, which is visible only to users. Share your experiences with a larger group of users.",
+        "footer": "Copyright. www.divelog.com. All rights reserved."
+    },
+    "aboutMe": {
+        "jumbotron": "FullStack Java Developer",
+        "text": "Hello to all Divelog users and future users. I am a programmer by profession. This website was entirely created by me and was created as a result of joining my two passions - diving and programming. My idea was to create something that will allow to make diving acquaintances from one place and combine all the necessary functionalities into one whole. No matter where you are, now all you need is Internet access and you can confidently exchange your experiences. The functionalities that Divelog has can be found on the main page of the application. In addition to programming and diving, I still find time to study. I am an extramural student at one of Polish universities. That's all about me.",
+        "end-text": "I would like to thank everyone for using my application and I hope that visiting here will be your everyday life.",
+        "thanks": "Greetings"
+    },
+    "donate": {
+        "jumbotron": "Donations for Divelog",
+        "title-1": "Donations",
+        "paragraph-1": "I am very pleased that you use my work. This application is a challenge for me because of my profession, but also to keep such an application you need a lot of money, so thank you in advance for all the money provided for the development of the application.",
+        "button-title": "Click button below to donate:"
+    },
+    "contact": {
+        "jumbotron": "Contact with Divelog support",
+        "contact-title": "Contact",
+        "contact-paragraph": "The form below allows you to contact the Divelog administration. If you have any questions or suggestions, we are available to you and open to any suggestions. Technical problems can also be reported via the form.",
+        "form-title": "Contact form",
+        "form": {
+            "email": "Email address",
+            "message": "Message",
+            "textarea": "Write here your message",
+            "button": "Send message"
+        }
+    },
+    "searchFriends": {
+        "placeholder": "Search friends"
+    },
+    "menu": {
+        "socialMedia": "Social Media",
+        "logbook": "Logbook",
+        "map": "My map",
+        "forum": "Forum",
+        "settings": "Settings"
+    },
+    "leftCard": {
+        "news": "News",
+        "groups": "Groups"
+    },
+    "loading": "Loading...",
+    "googleMap": {
+        "story": "Your diving story",
+        "table": {
+            "name": "Name",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "delete": "Delete"
+        },
+        "modal": {
+            "title": "Add marker to story",
+            "text": "Name for marker:",
+            "close": "Close",
+            "save": "Save marker",
+            "swal": {
+                "title": "Success",
+                "text": "Refresh the page"
+            },
+            "swalError": {
+                "title": "Error",
+                "text": "Something goes wrong"
+            },
+            "swalLocation": {
+                "title": "No access",
+                "text": "You can not mark 2nd location"
+            }
+        },
+        "markerModal": {
+            "title": "Add exist marker",
+            "text": "Do you want assign this existing marker to dive ?"
+
+        }
+    },
+    "addDive": {
+        "form": {
+            "title": "Add dive to logbook",
+            "partnerName": "Partner's name",
+            "partnerSurname": "Partner's surname",
+            "entryTime": "Entry time",
+            "exitTime": "Exit time",
+            "avgDepth": "Average depth",
+            "maxDepth": "Maximum depth",
+            "visibility": "Visibility",
+            "waterTemperature": "Temperature of water",
+            "airTemperature": "Temperature of air",
+            "cylinderCapacity": {
+                "title": "Cylinder capacity",
+                "options": {
+                    "NONE": "NONE",
+                    "TWINSET": "Twinset",
+                    "REBREATHER": "Rebreather"
+                }
+            },
+            "suit": {
+                "title": "Suit",
+                "options": {
+                    "NONE": "NONE",
+                    "DRY": "Dry suit",
+                    "WET": "Wet suit",
+                    "SEMIARID": "Semiarid suit"
+                }
+            },
+            "waterType": {
+                "title": "Water type",
+                "options": {
+                    "NONE": "NONE",
+                    "SWEET": "Sweet water",
+                    "SALT": "Salt water"
+                }
+            },
+            "waterEntryType": {
+                "title": "Entry type to water",
+                "options": {
+                    "NONE": "NONE",
+                    "COAST": "COAST",
+                    "BOAT": "BOAT"
+                }
+            },
+            "glovesType": {
+                "title": "Gloves type",
+                "options": {
+                    "NONE": "NONE",
+                    "WET": "Wet",
+                    "DRY": "Dry"
+                }
+            },
+            "ballast": "Ballast",
+            "divingType": {
+                "title": "Diving type",
+                "options": {
+                    "NONE": "NONE",
+                    "Recreational": "Recreational diving",
+                    "Technical": "Technical diving",
+                    "Cave": "Cave diving",
+                    "Wreck": "Wreck diivng"
+                }
+            },
+            "location": "Location",
+            "comment": "Comment",
+            "button": "Confirm"
+        },
+        "invalidPartnerName": "Maximum 60 characters is permitted.",
+        "invalidPartnerSurname": "Maximum 100 characters is permitted.",
+        "invalidMaxDepth": "Maximum depth is required.",
+        "invalidVisibility": "Visibility is required.",
+        "invalidMarker": "Location is required."
+    },
+    "logbook": {
+        "addButton": "Add dive to logbook",
+        "table": {
+            "partnerName": "Partner's name",
+            "partnerSurname": "Partner's surname",
+            "entryTime": "Entry time",
+            "exitTime": "Exit time",
+            "location": "Location",
+            "avgDepth": "Average depth",
+            "maxDepth": "Maximum depth",
+            "airTemperature": "Temperature of air",
+            "waterTemperature": "Temperature of water",
+            "divingType": "Diving type",
+            "UPDATE": "UPDATE",
+            "DELETE": "DELETE"
+        }
+    },
+    "forum": {
+        "AddPosts": {
+            "form": {
+                "title": "Add new post",
+                "labelMsg": "Message",
+                "filestackBtn": "Upload data",
+                "submit": "Publicate",
+                "validation": {
+                    "invalidMessage": "Message length must be minimum 10 characters.",
+                    "successUploaded": "Success uploaded files:",
+                    "failureUploaded": "Failure uploaded files:"
+                }
+            }
+        },
+        "AddTopic": {
+            "form": {
+                "title": "Add new topic",
+                "labelTitle": "Title",
+                "labelMsg": "Message",
+                "filestackBtn": "Upload data",
+                "submit": "Publicate",
+                "validation": {
+                    "invalidTitle": "Title length must be between 10 and 160 characters.",
+                    "invalidMessage": "Message length must be minimum 10 characters.",
+                    "successUploaded": "Success uploaded files:",
+                    "failureUploaded": "Failure uploaded files:"
+                }
+            }
+        },
+        "deleteAttachmentButton": "DELETE",
+        "forum": {
+            "title": "Select forum",
+            "createBtn": "CREATE TOPIC",
+            "news": {
+                "title": "Warning",
+                "message": "You have to select language for forum"
+            }
+        },
+        "post": {
+            "editBtn": "EDIT",
+            "deleteBtn": "DELETE",
+            "uploadFiles": "Upload data",
+            "successUploaded": "Success uploaded files:",
+            "failureUploaded": "Failure uploaded files:",
+            "news": {
+                "title": "Success",
+                "message": "Post has been removed successfully."
+            }
+        },
+        "topic": {
+            "comments": "comments",
+            "display": "display"
+        },
+        "updateTopic": {
+            "title": "Update topic"
+        }
+    },
+    "error-500": {
+        "title": "Error 500",
+        "message": "Internal server error"
+    },
+    "error-404": {
+        "title": "Error 404",
+        "message": "User does not exist."
+    },
+    "news": {
+        "fileUpload": {
+            "title": "Success",
+            "message": "File was removed successfully."
+        }
+    }
+}

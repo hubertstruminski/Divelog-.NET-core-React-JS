@@ -1,0 +1,25 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.google-container {
+    width: 100%;
+    background-image: url("../img/hexellence.png");
+    padding-top: 78px;
+}
+.google-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.story-header {
+    margin-bottom: 1%;
+    font-size: 2vw;
+    padding: 2.5%;
+}
+
+.marker-table {
+    width: 45%;
+    max-height: 600px;
+    overflow-y: scroll;
+    margin-bottom: 4%;
+}

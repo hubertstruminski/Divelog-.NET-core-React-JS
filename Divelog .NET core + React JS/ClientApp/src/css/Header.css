@@ -1,0 +1,81 @@
+.logoSize {
+    font-size: 1.4vw;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 35%;
+    top: 0;
+    right: 0;
+    background-color: #FF2D4B;
+    color: white;
+    font-size: 0.5vw;
+    font-weight: 900;
+    border-radius: 15px;
+    padding: 21%;
+}
+
+.btn-logout {
+    background-color: none;
+    border: none;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: none;
+}
+
+#left-menu-icon {
+    font-size: 1.15vw;
+}
+
+#left-menu {
+    position: fixed;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.85;
+    width: 15%;
+    left: -15%;
+    z-index: 110;
+    padding-top: 78px;
+}
+
+.header-profil-picture {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.item-menu {
+    padding: 15%;
+    font-size: 1.2vw;
+    background-color: black;
+}
+
+.item-menu:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ul-no {
+    list-style-type: none;
+}
+
+.a-link-menu {
+    color: #4a4949;
+    text-decoration: none;
+}
+
+.logo-header {
+    width: 80px;
+    height: 40px;
+}

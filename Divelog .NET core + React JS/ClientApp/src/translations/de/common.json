@@ -1,0 +1,259 @@
+{
+    "header": {
+        "home": "Homepage",
+        "guide": "Führung",
+        "aboutMe": "Über mich",
+        "donate": "Schenken",
+        "contact": "Kontakt",
+        "login": "Einloggen",
+        "logout": "Ausloggen"
+    },
+    "login": {
+        "login": "Einloggen",
+        "facebook-btn": "Einloggen mit facebook"
+    },
+    "home": {
+        "built": "Gebaut für Taucher",
+        "step": "Treten Sie ein in die Tiefen des Ozeans",
+        "let": "Trete ein!",
+        "fb-title": "Facebook-Schnittstelle",
+        "fb-paragraph": "Teile deine Eindrücke mit der Tauchwelt und bleibe dank Facebook API mit anderen Tauchern in Kontakt. Beiträge hinzufügen, Fotos teilen, Kommentare abgeben und an Gruppen teilnehmen. Mit Freunden reden. Unsere Schnittstelle ist absolut sicher.",
+        "logbook": "Logbuch",
+        "logbook-paragraph": "Bleiben Sie auf dem Laufenden. Keine Sorge, alles was Sie brauchen ist ein Internetzugang und Sie müssen sich keine Sorgen machen, wo Sie Ihren nächsten Tauchgang speichern können. Divelog unterstützt die Speicherung von Tauchdaten in unserer Datenbank. Sie können auch dynamische PDF-Dateien erstellen.",
+        "maps": "Google Karten",
+        "maps-paragraph": "Mit Divelog können Sie Orte auf Karten von Google markieren. Überprüfen Sie noch heute Ihren Tauchstandortverlauf und teilen Sie eine wunderschöne Karte mit dem Rest der Tauchwelt.",
+        "computer": "Tauchcomputer",
+        "computer-paragraph": "Mit Divelog können Sie einen Tauchplan erstellen. Loggen Sie sich ein und geben Sie alle erforderlichen Daten ein und Sie erhalten einen vollständigen Tauchplan. Sie können auch dynamische PDF-Dateien erstellen.",
+        "progress": "Die Funktion in Bearbeitung...",
+        "forum": "Forum",
+        "forum-paragraph": "Wenn Sie wichtige Informationen für die Tauchwelt haben, können Sie das verfügbare Forum verwenden, das nur für Benutzer sichtbar ist. Teilen Sie Ihre Erfahrungen mit einer größeren Gruppe von Benutzern.",
+        "footer": "Copyright. www.divelog.com. Alle rechte vorbehalten."
+    },
+    "aboutMe": {
+        "jumbotron": "FullStack Java Entwickler",
+        "text": "Hallo an alle Divelog-Benutzer und zukünftige Benutzer. Ich bin von Beruf Programmierer. Diese Website wurde vollständig von mir erstellt und entstand aus der Verbindung meiner beiden Leidenschaften - Tauchen und Programmieren. Meine Idee war es, etwas zu kreieren, das es ermöglicht, Tauchbekanntschaften von einem Ort aus zu machen und alle notwendigen Funktionen in einem Ganzen zu vereinen. Egal wo Sie sind, jetzt brauchen Sie nur noch einen Internetzugang und können Ihre Erfahrungen ganz einfach austauschen. Die Funktionen von Divelog finden Sie auf der Hauptseite der Anwendung. Neben dem Programmieren und Tauchen habe ich noch Zeit zum Lernen. Ich bin ein externer Student an einer polnischen Universität. Soviel zu mir.",
+        "end-text": "Ich möchte mich bei allen für die Nutzung meiner Bewerbung bedanken und hoffe, dass der Besuch hier Ihr Alltag wird.",
+        "thanks": "Grüße"
+    },
+    "donate": {
+        "jumbotron": "Spenden für Divelog",
+        "title-1": "Spenden",
+        "paragraph-1": "Ich freue mich sehr, dass Sie meine Arbeit nutzen. Diese Bewerbung ist für mich aufgrund meines Berufs eine Herausforderung, aber um eine solche Bewerbung zu führen, benötigen Sie viel Geld. Vielen Dank im Voraus für das gesamte Geld, das für die Entwicklung der Bewerbung bereitgestellt wurde.",
+        "button-title": "Klicken Sie auf die Schaltfläche unten, um zu spenden"
+    },
+    "contact": {
+        "jumbotron": "Wenden Sie sich an den Divelog-Support",
+        "contact-title": "Kontakt",
+        "contact-paragraph": "Mit dem folgenden Formular können Sie die Divelog-Administration kontaktieren. Wenn Sie Fragen oder Anregungen haben, stehen wir Ihnen gerne zur Verfügung und sind offen für Anregungen. Technische Probleme können auch über das Formular gemeldet werden.",
+        "form-title": "Kontakt Formular",
+        "form": {
+            "email": "E-Mail-Addresse",
+            "message": "Nachricht",
+            "textarea": "Schreiben Sie hier Ihre Nachricht",
+            "button": "Nachricht senden"
+        }
+    },
+    "searchFriends": {
+        "placeholder": "Freunde suchen"
+    },
+    "menu": {
+        "socialMedia": "Sozialen Medien",
+        "logbook": "Logbuch",
+        "map": "Meine Karte",
+        "forum": "Forum",
+        "settings": "Einstellung"
+    },
+    "leftCard": {
+        "news": "Nachrichten",
+        "groups": "Gruppen"
+    },
+    "loading": "Wird geladen...",
+    "googleMap": {
+        "story": "Deine Tauchergeschichte",
+        "table": {
+            "name": "Name",
+            "latitude": "Breite",
+            "longitude": "Längengrad",
+            "delete": "Löschen"
+        },
+        "modal": {
+            "title": "füge eine Markierung zur Geschichte hinzu",
+            "text": "Name für Marker:",
+            "close": "schließen",
+            "save": "Markierung speichern",
+            "swal": {
+                "title": "Erfolg",
+                "text": "Lade die Seite neu"
+            },
+            "swalError": {
+                "title": "Error",
+                "text": "Etwas läuft schief"
+            },
+            "swalLocation": {
+                "title": "kein Zugang",
+                "text": "Sie können den zweiten Standort nicht markieren"
+            }
+        },
+        "markerModal": {
+            "title": "Vorhandenen Marker hinzufügen",
+            "text": "Möchten Sie diesen vorhandenen Marker zum Tauchen zuweisen?"     
+        }
+    },
+    "addDive": {
+        "form": {
+            "title": "Tauchgang zum Logbuch hinzufügen",
+            "partnerName": "Name des Partners",
+            "partnerSurname": "Familienname des Partners",
+            "entryTime": "Eintrittszeit",
+            "exitTime": "Ausstiegszeit",
+            "avgDepth": "durchschnittliche Tiefe",
+            "maxDepth": "maximale Tiefe",
+            "visibility": "Sichtweite",
+            "waterTemperature": "Temperatur des Wassers",
+            "airTemperature": "Temperatur der Luft",
+            "cylinderCapacity": {
+                "title": "Zylinderleistung",
+                "options": {
+                    "NONE": "KEINER",
+                    "TWINSET": "Twinset",
+                    "REBREATHER": "Rebreather"
+                }
+            },
+            "suit": {
+                "title": "Tauchanzug",
+                "options": {
+                    "NONE": "KEINER",
+                    "DRY": "Trockenanzug",
+                    "WET": "Neoprenanzug",
+                    "SEMIARID": "halbtrockener Anzug"
+                }
+            },
+            "waterType": {
+                "title": "Wasserart",
+                "options": {
+                    "NONE": "KEINER",
+                    "SWEET": "Süßwasser",
+                    "SALT": "Salzwasser"
+                }
+            },
+            "waterEntryType": {
+                "title": "Eintrittsart ins Wasser",
+                "options": {
+                    "NONE": "KEINER",
+                    "COAST": "Küste",
+                    "BOAT": "Boot"
+                }
+            },
+            "glovesType": {
+                "title": "Handschuhtyp",
+                "options": {
+                    "NONE": "KEINER",
+                    "WET": "nasse Handschuhe",
+                    "DRY": "trockene Handschuhe"
+                }
+            },
+            "ballast": "Ballast",
+            "divingType": {
+                "title": "Tauchtyp",
+                "options": {
+                    "NONE": "KEINER",
+                    "Recreational": "Freizeittauchen",
+                    "Technical": "Technisches Tauchen",
+                    "Cave": "Höhlentauchen",
+                    "Wreck": "Wracktauchen"
+                }
+            },
+            "location": "Standort",
+            "comment": "Kommentar",
+            "button": "Bestätigen"
+        }
+    },
+    "logbook": {
+        "addButton": "Tauchgang zum Logbuch hinzufügen",
+        "table": {
+            "partnerName": "Name des Partners",
+            "partnerSurname": "Familienname des Partners",
+            "entryTime": "Eintrittszeit",
+            "exitTime": "Ausstiegszeit",
+            "location": "Lage",
+            "avgDepth": "durchschnittliche Tiefe",
+            "maxDepth": "maximale Tiefe",
+            "airTemperature": "Temperatur der Luft",
+            "waterTemperature": "Temperatur des Wassers",
+            "divingType": "Tauchtyp",
+            "UPDATE": "AKTUALISIEREN",
+            "DELETE": "LÖSCHEN"
+        }
+    },
+    "forum": {
+        "AddPosts": {
+            "form": {
+                "title": "Neuen Beitrag hinzufügen",
+                "labelMsg": "Botschaft",
+                "filestackBtn": "Daten hochladen",
+                "submit": "publizieren",
+                "validation": {
+                    "invalidMessage": "Die Nachrichtenlänge muss mindestens 10 Zeichen betragen.",
+                    "successUploaded": "Erfolgreich hochgeladene Dateien:",
+                    "failureUploaded": "Fehler beim Hochladen der Dateien:"
+                }
+            }
+        },
+        "AddTopic": {
+            "form": {
+                "title": "Neues Thema hinzufügen",
+                "labelTitle": "Titel",
+                "labelMsg": "Botschaft",
+                "filestackBtn": "Daten hochladen",
+                "submit": "publizieren",
+                "validation": {
+                    "invalidTitle": "Die Länge des Titels muss mindestens 10 bis 160 Zeichen betragen.",
+                    "invalidMessage": "Die Nachrichtenlänge muss mindestens 10 Zeichen betragen.",
+                    "successUploaded": "Erfolgreich hochgeladene Dateien:",
+                    "failureUploaded": "Fehler beim Hochladen der Dateien:"
+                }
+            }
+        },
+        "deleteAttachmentButton": "LÖSCHEN",
+        "forum": {
+            "title": "Forum auswählen",
+            "createBtn": "Thema erstellen",
+            "news": {
+                "title": "Warnung",
+                "message": "Sie müssen die Sprache für das Forum auswählen"
+            }
+        },
+        "post": {
+            "editBtn": "bearbeiten",
+            "deleteBtn": "LÖSCHEN",
+            "uploadFiles": "Daten hochladen",
+            "successUploaded": "Erfolgreich hochgeladene Dateien:",
+            "failureUploaded": "Fehler beim Hochladen der Dateien:",
+            "news": {
+                "title": "Erfolg",
+                "message": "Beitrag wurde erfolgreich entfernt."
+            }
+        },
+        "topic": {
+            "comments": "Bemerkungen",
+            "display": "Anzeige"
+        },
+        "updateTopic": {
+            "title": "Thema aktualisieren"
+        }
+    },
+    "error-500": {
+        "title": "Error 500",
+        "message": "interner Serverfehler"
+    },
+    "error-404": {
+        "title": "Error 404",
+        "message": "Benutzer existiert nicht."
+    },
+    "news": {
+        "fileUpload": {
+            "title": "Erfolg",
+            "message": "Datei wurde erfolgreich entfernt."
+        }
+    }
+}

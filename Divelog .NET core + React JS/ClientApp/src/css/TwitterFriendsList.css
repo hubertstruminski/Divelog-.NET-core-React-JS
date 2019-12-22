@@ -1,0 +1,17 @@
+.twitter-friends-list-hover:hover {
+    background-color: #EDF1F4;
+}
+
+.twitter-friends-list {
+    height: 100%;
+}
+
+.twitter-friend-invite-divelog-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.twitter-friend-invite-divelog-btn > button {
+    font-size: 0.65vw;
+}

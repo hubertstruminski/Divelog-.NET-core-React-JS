@@ -1,0 +1,37 @@
+.twitter-single-message-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.twitter-single-message-wrapper img {
+    width: 7.5%;
+    height: 7.5%;
+    border-radius: 50%;
+}
+
+.twitter-single-message-container {
+    max-width: 85%;
+    border-radius: 25px;
+    background-color: white;
+    text-align: right;
+    padding: 1.75%;
+    font-size: 0.65vw;
+}
+
+.twitter-single-message-text {
+    width: 100%;
+    text-align: justify;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-block;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+.twitter-dm-photo-message {
+    max-width: 85%;
+    max-height: 60%;
+}

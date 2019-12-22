@@ -1,0 +1,184 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.donate-container {
+    background-image: url("../img/hexellence.png");
+    width: 100%;
+}
+
+.donate-jumbotron {
+    background-image: url("../img/donate/sea.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    margin-bottom: 200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-jumbotron-shadow {
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(84,82,82,1);
+    -moz-box-shadow: 0px 10px 15px 5px rgba(84,82,82,1);
+    box-shadow: 0px 10px 15px 5px rgba(84,82,82,1);
+}
+
+.donate-jumbotron-text {
+    font-size: 3vw;
+}
+
+.donate-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.donate-background {
+    background-image: url("../img/donate/commerce.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.bottom-margin {
+    margin-bottom: 10%;
+}
+
+.donate-text {
+    background-color: white;
+    padding: 5%;
+}
+
+.donate-font-size-title-1 {
+    font-size: 2vw;
+}
+
+.donate-button-container {
+    width: 60%;
+    height: 420px;
+
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(122,117,122,1);
+    -moz-box-shadow: 5px 5px 20px 5px rgba(122,117,122,1);
+    box-shadow: 5px 5px 20px 5px rgba(122,117,122,1);
+
+    background-color: white;
+}
+
+.donate-button-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vw;
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px) {
+    .donate-container {
+        min-height: 960px;
+    }
+
+    .donate-jumbotron {
+        height: 350px;
+        margin-bottom: 50px;
+    }
+
+    .donate-jumbotron-text {
+        font-size: 4.5vw;
+    }
+
+    .donate-font-size-title-1 {
+        font-size: 4vw;
+    }
+
+    .donate-button-container {
+        height: 160px;
+    }
+
+    .donate-button-title {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px) {
+    .donate-container {
+        min-height: 1136px;
+    }
+    
+    .donate-jumbotron {
+        height: 500px;
+        margin-bottom: 50px;
+    }
+
+    .donate-jumbotron-text {
+        font-size: 4.5vw;
+    }
+
+    .donate-font-size-title-1 {
+        font-size: 4vw;
+    }
+
+    .donate-button-container {
+        height: 160px;
+    }
+
+    .donate-button-title {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 800px) {
+    .donate-jumbotron {
+        height: 750px;
+        margin-bottom: 100px;
+    }
+
+    .donate-jumbotron-text {
+        font-size: 4.5vw;
+    }
+
+    .donate-font-size-title-1 {
+        font-size: 4vw;
+    }
+
+    .donate-button-container {
+        height: 250px;
+    }
+
+    .donate-button-title {
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 1100px) and (min-width: 800px) and (min-height: 1900px) {
+    .donate-container {
+        min-height: 1920px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1100px) {
+    .donate-jumbotron {
+        height: 950px;
+        margin-bottom: 100px;
+    }
+
+    .donate-jumbotron-text {
+        font-size: 4vw;
+    }
+
+    .donate-font-size-title-1 {
+        font-size: 3.5vw;
+    }
+
+    .donate-button-container {
+        height: 350px;
+    }
+
+    .donate-button-title {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1100px) and (min-height: 2600px) {
+    .donate-container {
+        min-height: 2688px;
+    }
+}

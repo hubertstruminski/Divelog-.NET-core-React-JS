@@ -1,0 +1,69 @@
+{
+  "name": "react-divelog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-loader": "^3.0.4",
+    "classnames": "^2.2.6",
+    "fb": "^2.0.0",
+    "filestack-js": "^3.7.0",
+    "filestack-react": "^3.1.0",
+    "google-maps-react": "^2.0.2",
+    "i18next": "^17.0.7",
+    "j": "^1.0.0",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "jspdf": "^1.5.3",
+    "jwt-decode": "^2.2.0",
+    "mdbootstrap": "^4.8.7",
+    "moment": "^2.24.0",
+    "popper.js": "^1.15.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.9.0",
+    "react-facebook-login": "^4.1.1",
+    "react-geolocated": "^3.0.1",
+    "react-i18next": "^10.11.4",
+    "react-js-pagination": "^3.0.2",
+    "react-pdf": "^4.1.0",
+    "react-player": "^1.13.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-twitter-auth": "0.0.13",
+    "react-twitter-embed": "^2.0.8",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "sweetalert": "^2.1.2",
+    "tether": "^1.4.7",
+    "twit": "^2.2.11",
+    "universal-cookie": "^4.0.2",
+    "unsplash-js": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+.twitter-messages-contact-modal-container {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.twitter-messages-contact-modal-container:hover {
+    background-color: #F5F8FA;
+}
+.twitter-messages-contact-modal-avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15%;
+
+}
+
+.twitter-messages-contact-modal-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.twitter-messages-contact-modal-info-container {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2.5%;
+    line-height: 200%;
+}

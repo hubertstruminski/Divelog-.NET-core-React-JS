@@ -1,0 +1,167 @@
+.topic-posts-container {
+    width: 100%;
+    background-image: url("../img/tactile_noise.png");
+    padding-top: 78px;
+    min-height: 100vh;
+}
+
+.main-post-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-post-container {
+    width: 75%;
+    min-height: 100px;
+    margin-top: 2.5%;
+    background-image: linear-gradient(-90deg, #707070, #333A40);
+
+    display: grid;
+    grid-template-columns: 15% 85%;
+
+    border: 1px solid white;
+}
+
+.main-post-grid-one {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+
+    border-right: 1px solid white;
+}
+
+.main-post-grid-one img {
+    width: 75px;
+    height: 75px;
+}
+
+.main-post-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-size: 1vw;
+    padding: 2%;
+}
+
+.main-post-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-post-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-size: .8vw;
+    padding: 2%;
+}
+
+.main-post-grid-two {
+    color: white;
+    padding: 2%;
+    text-align: justify;
+    width: 100%;
+}
+
+.main-post-title {
+    width: 100%;
+    font-size: 1vw;
+    text-align: left;
+    font-weight: 700;
+    min-height: 40px;
+}
+
+.main-post-message {
+    width: 100%;
+    margin-top: 2%;
+    font-size: 0.75vw;
+}
+
+.main-post-attachments {
+    width: 100%;
+}
+
+.attachment-images {
+    max-height: 150px;
+}
+
+.line-break-posts {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid white;
+    margin-top: 2.5%;
+}
+
+.attachment-videos {
+    max-height: 250px;
+}
+
+.post-message {
+    width: 100%;
+    margin-top: 0.25%;
+    font-size: 0.75vw;
+}
+
+.edit-textarea {
+    width: 100%;
+    color: white;
+}
+
+.edit-post-div {
+    width: 100%;
+    min-height: 50px;
+}
+
+.btn-success-float {
+    float: right;
+}
+
+.edit-post-upload-files-div {
+    text-align: center;
+}
+
+.edit-post-upload-file {
+    float: left;
+}
+
+.page-item {
+    background-color: #FEFEFE;
+}
+
+.page-link {
+    background-color: #238AF1;
+    color: black;
+}
+
+.page-active {
+    background-color: #238AF1;
+    color: black;
+}
+
+.pagination-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+
+.post-updated-box {
+    width: 100%;
+    text-align: right;
+    font-size: 0.75vw;
+}

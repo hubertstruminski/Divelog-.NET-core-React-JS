@@ -1,0 +1,37 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.add-dive-container {
+    width: 100%;
+    background-image: url("../img//hexellence.png");
+    padding-top: 78px;
+}
+
+.add-dive-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-dive-box {
+    width: 40%;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2.5%;
+}
+
+.dive-shadow {
+    -webkit-box-shadow: 10px 10px 15px 5px rgba(156,156,156,1);
+    -moz-box-shadow: 10px 10px 15px 5px rgba(156,156,156,1);
+    box-shadow: 10px 10px 15px 5px rgba(156,156,156,1);
+}
+
+.add-dive-title {
+    font-size: 2vw;
+    padding-bottom: 5%;
+}
+
+.btn-add-dive-center {
+    display: flex;
+    justify-content: center;
+}

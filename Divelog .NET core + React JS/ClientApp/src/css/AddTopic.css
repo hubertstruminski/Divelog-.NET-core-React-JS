@@ -1,0 +1,40 @@
+.add-topic-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/tactile_noise.png");
+    padding-top: 78px;
+}
+
+.add-topic-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-topic-box {
+    background-image: linear-gradient(-90deg, #707070, #333A40);
+    width: 40%;
+    padding: 1.5%;
+    color: white;
+    border: 1px solid white;
+}
+
+.new-topic-title {
+    font-size: 2vw;
+    padding-bottom: 3%;
+}
+
+.new-topic-btn {
+    padding: 2%;
+}
+
+.btn-upload {
+    border: 1px solid orange;
+    float: left;
+}
+
+.new-update-topic-inputs {
+    background-image: linear-gradient(-90deg, #707070, #333A40);
+    color: white;
+}
+

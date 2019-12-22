@@ -1,0 +1,21 @@
+.twitter-messages-selected-contact-container {
+    margin: 1%;
+    border: 1px solid #00A4EF;
+    border-radius: 25px;
+    color: #00A4EF;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.twitter-messages-selected-contact-close-btn {
+    color: #00A4EF;
+}
+
+.twitter-messages-selected-contact-icon-container {
+    /* margin-left: 1%; */
+    display: inline-block;
+    padding-left: 5.5%;
+}

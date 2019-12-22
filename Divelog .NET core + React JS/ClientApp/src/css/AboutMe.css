@@ -1,0 +1,421 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.about-container {
+    background-image: url("../img/hexellence.png");
+    max-width: 100%;
+    min-height: 1800px;
+}
+
+.about-jumbotron {
+    background-image: url("../img/about/about-jumbotron.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    margin-bottom: 100px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.about-jumbotron-shadow {
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(84,84,84,1);
+    -moz-box-shadow: 0px 10px 15px 0px rgba(84,84,84,1);
+    box-shadow: 0px 10px 15px 0px rgba(84,84,84,1);
+}
+
+.about-jumbotron-text {
+    margin-top: 10%;
+    font-size: 3.5vw;
+}
+
+.card {
+    background-color: lightgray;
+    border: 0;
+}
+
+.card-size {
+    width: 45%;
+    height: 80%;
+}
+
+.card-center {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-margin-bottom {
+    margin-bottom: 50px;
+}
+
+.card-shadow {
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    border: 1px solid #8f8f8f;
+}
+
+.grid-about-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.grid-about-item {
+    display: flex;
+    justify-content: flex-start;
+    height: 500px;
+}
+
+.grid-about-item img {
+    border-radius: 0 0 100px 0;
+}
+
+.grid-about-item-2 {
+    height: 500px;
+    text-align: justify;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.about-photo {
+    max-width: 100%;
+}
+
+.about-item2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.about-txt-1 {
+    font-size: 1vw;
+}
+
+.thanks-txt-2 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 5%;
+}
+
+.about-greetings-txt-3 {
+    text-align: right;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.signature-me {
+    font-family: 'Caveat', cursive;
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px) and (max-height: 1000px) {
+    .about-container {
+        min-height: 960px;
+    }
+
+    .about-jumbotron {
+        height: 350px;
+    }
+
+    .about-jumbotron-text {
+        font-size: 6vw;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 60%;
+    }
+
+    .grid-about-item {
+        height: 250px;
+    }
+
+    .grid-about-item-2 {
+        height: 250px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.85vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px) and (max-height: 1200px) {
+    .about-container {
+        min-height: 1500px;
+    }
+
+    .about-jumbotron {
+        height: 550px;
+    }
+
+    .about-jumbotron-text {
+        font-size: 6vw;
+    }
+    
+    .card-size {
+        width: 65%;
+        height: 70%;
+    }
+
+    .grid-about-item {
+        height: 500px;
+    }
+
+    .grid-about-item-2 {
+        height: 500px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.85vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 800px) and (max-height: 2100px) {
+    .about-container {
+        min-height: 2050px;
+    }
+
+    .about-jumbotron {
+        height: 900px;
+    }
+
+    .about-jumbotron-text {
+        font-size: 6vw;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 70%;
+    }
+
+    .grid-about-item {
+        height: 650px;
+    }
+
+    .grid-about-item-2 {
+        height: 650px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.85vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1100px) {
+    .about-container {
+        min-height: 2700px;
+    }
+
+    .about-jumbotron {
+        height: 1200px;
+    }
+
+    .about-jumbotron-text {
+        font-size: 6vw;
+    }
+    
+    .card-size {
+        width: 65%;
+        height: 80%;
+    }
+
+    .grid-about-item {
+        height: 850px;
+    }
+
+    .grid-about-item-2 {
+        height: 850px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.65vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 600px) and (orientation: landscape) {
+    .about-container {
+        height: 900px;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 60%;
+    }
+
+    .grid-about-item {
+        height: 300px;
+    }
+
+    .grid-about-item-2 {
+        height: 300px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.55vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 850px) and (orientation: landscape) {
+    .about-container {
+        height: 1100px;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 70%;
+    }
+
+    .grid-about-item {
+        height: 500px;
+    }
+
+    .grid-about-item-2 {
+        height: 500px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.55vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1100px) and (orientation: landscape) {
+    .about-container {
+        height: 1400px;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 70%;
+    }
+
+    .grid-about-item {
+        height: 600px;
+    }
+
+    .grid-about-item-2 {
+        height: 600px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.5vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 2000px) and (min-width: 1900px) and (orientation: landscape) {
+    .about-container {
+        min-height: 2500px;
+    }
+
+    .about-jumbotron {
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width: 2200px) and (min-width: 2000px) and (orientation: landscape) {
+    .about-container {
+        min-height: 2500px;
+    }
+
+    .about-jumbotron {
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width: 2700px) and (min-width: 2200px) and (orientation: landscape) {
+    .about-container {
+        min-height: 3800px;
+    }
+
+    .about-jumbotron {
+        height: 1900px;
+    }
+
+    .about-jumbotron-text {
+        font-size: 6vw;
+    }
+
+    .about-container {
+        height: 2400px;
+    }
+
+    .card-size {
+        width: 65%;
+        height: 70%;
+    }
+
+    .grid-about-item {
+        height: 1100px;
+    }
+
+    .grid-about-item-2 {
+        height: 1100px;
+    }
+
+    .about-item2 {
+        font-size: 3.5vw;
+    }
+
+    .about-txt-1 {
+        font-size: 1.5vw;
+    }
+    
+    .thanks-txt-2 {
+        font-size: 2vw;
+    }
+}

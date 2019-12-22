@@ -1,0 +1,23 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.logbook-container {
+    width: 100%;
+    background-image: url("../img/hexellence.png");
+    height: 100vh;
+    padding-top: 78px;
+}
+
+.btn-padding {
+    margin-top: 2.5%;
+    padding: 1%;
+}
+
+.alert-margin {
+    margin-top: 20%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.table-margin {
+    margin-top: 2.5%;
+}

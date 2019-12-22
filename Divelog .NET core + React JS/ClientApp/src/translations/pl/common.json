@@ -1,0 +1,265 @@
+{
+    "header": {
+        "home": "Strona główna",
+        "guide": "Przewodnik",
+        "aboutMe": "O mnie",
+        "donate": "Darowizna",
+        "contact": "Kontakt",
+        "login": "Zaloguj się",
+        "logout": "Wyloguj się"
+    },
+    "login": {
+        "login": "Zaloguj się",
+        "facebook-btn": "Zaloguj się z facebook"
+    },
+    "home": {
+        "built": "Stworzone dla nurków",
+        "step": "Wejdź w otchłań oceanu",
+        "let": "Dołącz do nas!",
+        "fb-title": "Interfejs Facebooka",
+        "fb-paragraph": "Dziel się wrażeniami ze światem nurkowym pozostajac w ciągłym kontakcie z innymi nurkami dzięki Facebook API. Rozmawiaj z nurkami, dodawaj posty, dziel się zdjęciami, komentuj i uczestnicz w grupach. Nasz interfejs jest w pełni bezpieczny.",
+        "logbook": "Logbook",
+        "logbook-paragraph": "Bądź na bieżąco. Żadnych obaw, wystarczy dostęp do internetu i nie musisz się martwić o to gdzie zapisać swoje kolejne nurkowanie. Divelog wspiera przechowywanie danych o nurkowaniach w naszej bazie danych. Możesz także wygenerować dynamiczny PDF.",
+        "maps": "Mapy Google",
+        "maps-paragraph": "Divelog pozwala na oznaczanie lokalizacji na mapach od Google. Już dziś sprawdź swoją historię lokalizacji nurkowań i podziel się piękną mapą z resztą świata nurkowego.",
+        "computer": "Komputer nurkowy",
+        "computer-paragraph": "Divelog pozwala na tworzenie planu nurkowania. Zaloguj się i podaj wszystkie wymagane dane, a otrzymasz w pełni kompleksowy plan nurkowania. Możesz także wygenerować dynamiczny PDF.",
+        "progress": "Funkcjonalność w trakcie...",
+        "forum": "Forum",
+        "forum-paragraph": "Jeżeli masz ważna informację do przekazania światu nurkowemu możesz skorzystać z dostępnego forum, które jest widoczne tylko dla użytkowników. Dziel się przeżyciami z większym gronem użytkowników.",
+        "footer": "Prawo autorskie. www.divelog.com. Wszelkie prawa zastrzeżone."
+    },
+    "aboutMe": {
+        "jumbotron": "Programista Java FullStack",
+        "text": "Witam wszystkich użytkowników Divelog oraz tych przyszłych. Na co dzień z zawodu jestem programistą. Ten serwis został w całości stworzony przeze mnie i powstał w skutek połączenia dwóch moich pasji - nurkowania i programowania. Moim pomysłem było stworzyć coś co pozwoli na nawiązywanie znajomości nurkowych z jednego miejsca oraz połączyć wszystkie potrzebne funkcjonalności w jedną całość. Nieważne gdzie jesteś, teraz wystarczy tylko dostęp do internetu i możesz śmiało wymieniać się swoimi przeżyciami. Funkcjonalności jakie posiada Divelog możecie Państwo znaleźć na stronie głównej aplikacji. Poza programowaniem i nurkowaniem znajduję jeszcze czas na studiowanie. Jestem studentem zaocznym jednej z polskich uczelni. Tyle o mnie.",
+        "end-text": "Chciałbym wszystkim serdecznie podziękować za użytkowanie mojej aplikacji i mam nadzieję, że zaglądanie tutaj będzie waszą codziennością.",
+        "thanks": "Pozdrawiam."
+    },
+    "donate": {
+        "jumbotron": "Darowizny dla Divelog",
+        "title-1": "Darowizny",
+        "paragraph-1": "Jest mi niezmiernie miło, że Państwo korzystacie z mojej twórczości. Ta aplikacja stanowi dla mnie wyzwanie ze względu na wykonywaną profesję, ale też do utrzymania takiej aplikacji potrzebne są niemałe pieniądze, dlatego z góry dziękuję za każde przekazane pieniądze na rozwój aplikacji.",
+        "button-title": "Kliknij przycisk poniżej żeby przekazać darowiznę"
+    },
+    "contact": {
+        "jumbotron": "Kontakt z Divelog",
+        "contact-title": "Kontakt",
+        "contact-paragraph": "Formularz zamieszczony poniżej umożliwia kontakt z administracją Divelog. Jeśli masz jakieś pytania bądź propozycje jesteśmy dla Ciebie dostępni i otwarci na wszelkie sugestie. Problemy techniczne też mogą być zgłaszane przez formularz.",
+        "form-title": "Formularz do kontaktu",
+        "form": {
+            "email": "Adres email",
+            "message": "Wiadomość",
+            "textarea": "Tutaj napisz wiadomość",
+            "button": "Wyślij wiadomość"
+        }
+    },
+    "searchFriends": {
+        "placeholder": "Szukaj znajomych"
+    },
+    "menu": {
+        "socialMedia": "Media społecznościowe",
+        "logbook": "Logbook",
+        "map": "Moja mapa",
+        "forum": "Forum",
+        "settings": "Ustawienia"
+    },
+    "leftCard": {
+        "news": "Aktualności",
+        "groups": "Grupy"
+    },
+    "loading": "Ładowanie...",
+    "googleMap": {
+        "story": "Twoja historia nurkowań",
+        "table": {
+            "name": "Nazwa",
+            "latitude": "Szerokość",
+            "longitude": "Długość",
+            "delete": "Usuń"
+        },
+        "modal": {
+            "title": "Dodaj znacznik do historii",
+            "text": "Nazwa dla znacznika:",
+            "close": "Zamknij",
+            "save": "Zapisz znacznik",
+            "swal": {
+                "title": "Sukces",
+                "text": "Odśwież stronę"
+            },
+            "swalError": {
+                "title": "Błąd",
+                "text": "Coś poszło źle"
+            },
+            "swalLocation": {
+                "title": "Brak dostępu",
+                "text": "Nie możesz zaznaczyć drugiej lokalizacji"
+            }
+        },
+        "markerModal": {
+            "title": "Dodaj istniejący znacznik",
+            "text": "Chcesz przypisać ten istniejący znacznik do nurkowania ?"
+            
+        }
+    },
+    "addDive": {
+        "form": {
+            "title": "Dodaj nurkowanie do logbooka",
+            "partnerName": "Imię partnera",
+            "partnerSurname": "Nazwisko partnera",
+            "entryTime": "Czas wejścia",
+            "exitTime": "Czas wyjścia",
+            "avgDepth": "Średnia głębokość",
+            "maxDepth": "Maksymalna głębokość",
+            "visibility": "WIdoczność",
+            "waterTemperature": "Temperatura wody",
+            "airTemperature": "Temperatura powietrza",
+            "cylinderCapacity": {
+                "title": "Pojemność butli",
+                "options": {
+                    "NONE": "NONE",
+                    "TWINSET": "Twinset",
+                    "REBREATHER": "Rebreather"
+                }
+            },
+            "suit": {
+                "title": "Skafander",
+                "options": {
+                    "NONE": "NIC",
+                    "DRY": "Suchy skafander",
+                    "WET": "Pianka",
+                    "SEMIARID": "Półsuchy skafander"
+                }
+            },
+            "waterType": {
+                "title": "Rodzaj wody",
+                "options": {
+                    "NONE": "NIC",
+                    "SWEET": "Woda słodka",
+                    "SALT": "Woda słona"
+                }
+            },
+            "waterEntryType": {
+                "title": "Rodzaj wejścia do wody",
+                "options": {
+                    "NONE": "NIC",
+                    "COAST": "BRZEG",
+                    "BOAT": "ŁÓDKA"
+                }
+            },
+            "glovesType": {
+                "title": "Rodzaj rękawic",
+                "options": {
+                    "NONE": "NIC",
+                    "WET": "Mokre",
+                    "DRY": "Suche"
+                }
+            },
+            "ballast": "Balast",
+            "divingType": {
+                "title": "Rodzaj nurkowania",
+                "options": {
+                    "NONE": "NIC",
+                    "Recreational": "Nurkowanie rekreacyjne",
+                    "Technical": "Nurkowanie techniczne",
+                    "Cave": "Nurkowanie jaskiniowe",
+                    "Wreck": "Nurkowanie wrakowe"
+                }
+            },
+            "location": "Lokalizacja",
+            "comment": "Komentarz",
+            "button": "Potwierdź"
+        },
+        "invalidPartnerName": "Maksymalnie 60 znaków jest dozwolonych.",
+        "invalidPartnerSurname": "Maksymalnie 100 znaków jest dozwolonych.",
+        "invalidMaxDepth": "Maksymalna głębokość jest wymagana.",
+        "invalidVisibility": "Widoczność jest wymagana.",
+        "invalidMarker": "Lokalizacja jest wymagana."
+    },
+    "logbook": {
+        "addButton": "Dodaj nurkowanie do logbooka",
+        "table": {
+            "partnerName": "Imię partnera",
+            "partnerSurname": "Nazwisko partnera",
+            "entryTime": "Czas wejścia",
+            "exitTime": "Czas wyjścia",
+            "location": "Lokalizacja",
+            "avgDepth": "Średnia głębokość",
+            "maxDepth": "Maksymalna głębokość",
+            "airTemperature": "Temperatura powietrza",
+            "waterTemperature": "Temperatura wody",
+            "divingType": "Rodzaj nurkowania",
+            "UPDATE": "AKTUALIZUJ",
+            "DELETE": "USUŃ"
+        }
+    },
+    "forum": {
+        "AddPosts": {
+            "form": {
+                "title": "Dodaj nowy post",
+                "labelMsg": "Wiadomość",
+                "filestackBtn": "Prześlij dane",
+                "submit": "Publikuj",
+                "validation": {
+                    "invalidMessage": "Długość wiadomości musi mieć co najmniej 10 znaków.",
+                    "successUploaded": "Pomyślnie przesłane pliki:",
+                    "failureUploaded": "Niepomyślnie przesłane pliki:"
+                }
+            }
+        },
+        "AddTopic": {
+            "form": {
+                "title": "Dodaj nowy temat",
+                "labelTitle": "Tytuł",
+                "labelMsg": "Wiadomość",
+                "filestackBtn": "Prześlij dane",
+                "submit": "Publikuj",
+                "validation": {
+                    "invalidTitle": "Długość tytułu musi mieć od 10 do 160 znaków.",
+                    "invalidMessage": "Długość wiadomości musi mieć co najmniej 10 znaków.",
+                    "successUploaded": "Pomyślnie przesłane pliki:",
+                    "failureUploaded": "Niepomyślnie przesłane pliki:"
+                }
+            }
+        },
+        "deleteAttachmentButton": "USUŃ",
+        "forum": {
+            "title": "Wybierz forum",
+            "createBtn": "DODAJ TEMAT",
+            "news": {
+                "title": "Ostrzeżenie",
+                "message": "Musisz wybrać język forum"
+            }
+        },
+        "post": {
+            "editBtn": "EDYTUJ",
+            "deleteBtn": "USUŃ",
+            "uploadFiles": "Prześlij dane",
+            "successUploaded": "Pomyślnie przesłane pliki:",
+            "failureUploaded": "Niepomyślnie przesłane pliki:",
+            "news": {
+                "title": "Sukces",
+                "message": "Post został usunięty pomyślnie."
+            }
+        },
+        "topic": {
+            "comments": "komentarzy",
+            "display": "wyświetleń"
+        },
+        "updateTopic": {
+            "title": "Edytuj temat"
+        }
+    },
+    "error-500": {
+        "title": "Błąd 500",
+        "message": "Wewnętrzny błąd po stronie serwera"
+    },
+    "error-404": {
+        "title": "Błąd 404",
+        "message": "Użytkownik nie istnieje."
+    },
+    "news": {
+        "fileUpload": {
+            "title": "Sukces",
+            "message": "Plik został usunięty pomyślnie."
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.twitter-messages-inbox-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+
+.twitter-messages-list-inbox {
+    max-height: 92%;
+    border-right: 1px solid lightgray;
+}
+
+/* .twitter-messages-person-box {
+    height: 100%;
+
+} */
+
+.twitter-messages-title-box {
+    width: 100%;
+    height: 7%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 7.5%; */
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
+    border-bottom: 1px solid lightgray;
+}
+
+.twitter-messages-title {
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.twitter-messages-add-icon {
+    font-size: 1.5vw;
+    color: #00A4EF;
+}
+
+.twitter-messages-add-icon:hover {
+    cursor: pointer;
+}
+
+.twitter-messages-person-invite-wrapper {
+    width: 100%;
+    height: 100%;
+    /*  */
+    /* max-height: 100vh; */
+    /*  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter-messages-person-invite {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8vw;
+    letter-spacing: 0.5px;
+    line-height: 225%;
+}
+
+.twitter-message-person-btn-new-message {
+    background-color: #00A4EF;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+    padding: 1.5%;
+
+}
+
+.twitter-message-person-btn-new-message:hover {
+    background-color: #0094D8;
+}
+
+.twitter-messages-list-persons-spinner {
+    width: 100%;
+    height: 100%;
+    max-height: 86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}

@@ -1,0 +1,152 @@
+/* Background pattern from Toptal Subtle Patterns */
+
+.tweets-likes-container {
+    width: 100%;
+    height: 100%;
+}
+
+.twitter-messages-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../img/hexellence.png");
+}
+
+.twitter-messages-grid-container {
+    display: grid;
+    grid-template-columns: 32.5% 52.5% 15%;
+    height: 100%;
+    
+}
+
+.twitter-messages-grid-item-1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding-top: 78px;
+    /*  */
+    max-height: 100vh;
+}
+
+.feed-container {
+    background-color: #f5f5f5;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    height: 100%;
+    z-index: 5;
+    padding-top: 78px;
+}
+.twitter-messages-grid-item-3 {
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.twitter-messages-left-categories-container {
+    position: fixed;
+    height: 75%;
+    width: 12.5%;
+    border-left: 1px solid #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    -moz-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+
+    z-index: 0;
+    
+
+    background-color: white;
+}
+
+.twitter-messages-rl-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 78px;
+}
+
+.twitter-messages-rr-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.twitter-messages-groups-container {
+    position: fixed;
+    width: 16.5%;
+    height: 75%;
+    border-top: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    -moz-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    background-color: #ebebeb;
+    font-size: 0.75vw;
+}
+
+.twitter-messages-friends-container {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    border-left: 1px solid #cfcfcf;
+
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    -moz-box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    box-shadow: 0px 10px 15px 5px rgba(133,133,133,1);
+    padding-top: 78px;
+    background-color: #ebebeb;
+}
+
+.twitter-messages-profil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    font-size: 0.75vw;
+    background-color: white;
+    font-weight: 700;
+}
+
+.twitter-profil-container:hover {
+    background-color: #E5F6FD;
+}
+
+.plus-shadow:hover {
+    text-shadow: 0px 0px 20px #042BCE;
+}
+
+.ins-profil-container {
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitter-messages-container-feed {
+    background-color: #f5f5f5;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    height: 100%;
+    z-index: 5;
+    padding-top: 78px;
+
+    -webkit-box-shadow: 5px 0px 10px 0px rgba(137,140,138,1);
+    -moz-box-shadow: 5px 0px 10px 0px rgba(137,140,138,1);
+    box-shadow: 5px 0px 10px 0px rgba(137,140,138,1);
+
+    /* display: grid;
+    grid-template-columns: 40% 60%;
+    /*  */
+    max-height: 100vh;
+}
+
+
