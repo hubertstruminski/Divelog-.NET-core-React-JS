@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthService from './AuthService';
 import { BACKEND_API_URL } from '../actions/types';
+import axios from 'axios';
 
 export default function withTwitterAuth(AuthComponent, props) {
     const Auth =  new AuthService();
@@ -43,8 +44,9 @@ export default function withTwitterAuth(AuthComponent, props) {
                         return;
                     }
                 } 
-                fetch(`${BACKEND_API_URL}/twitter/login/validate/token/${this.props.match.params.jwtToken}`, {
-                    method: 'GET',
+                axios(`${BACKEND_API_URL}/twitter/login/validate/token`, {
+                    method: 'POST',
+                    data: JSON.stringify(this.props.match.params.jwtToken),
                     headers: {
                         'Content-Type': 'application/json'
                     }

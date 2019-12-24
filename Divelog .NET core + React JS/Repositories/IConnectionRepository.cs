@@ -10,5 +10,7 @@ namespace Divelog_.NET_core___React_JS.Repositories
     {
         Connection FindByTwitterUserIdOrEmail(long twitterUserId, string email);
         void Save(Connection connection);
+        void Update(Connection connection);
+        Connection findByUserIdOrTwitterUserId(long userId, long twitterUserId);
     }
 }

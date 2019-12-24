@@ -9,5 +9,7 @@ namespace Divelog_.NET_core___React_JS.Repositories
     public interface ICustomTwitterRepository
     {
         void Save(CustomTwitter customTwitter);
+        CustomTwitter findByUser(Connection user);
+        void Update(CustomTwitter customTwitter);
     }
 }

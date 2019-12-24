@@ -9,6 +9,11 @@ namespace Divelog_.NET_core___React_JS.Context
 {
     public class DivelogContext : DbContext
     {
+        public DivelogContext(DbContextOptions<DivelogContext> options) : base(options)
+        {
+
+        }
+
         public DbSet<Connection> Connections { get; set; }
         public DbSet<CustomTwitter> CustomTwitters { get; set; }
 
@@ -19,10 +24,15 @@ namespace Divelog_.NET_core___React_JS.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Connection>()
-                .HasOne(c => c.CustomTwitter)
+            modelBuilder.Entity<Connection>(entity =>
+            {
+                //entity.Property(c => c.UserID)
+                //.IsRequired(false);
+
+                entity.HasOne(c => c.CustomTwitter)
                 .WithOne(ct => ct.User)
                 .HasForeignKey<CustomTwitter>(ct => ct.UserId);
+            });         
         }
     }
 }

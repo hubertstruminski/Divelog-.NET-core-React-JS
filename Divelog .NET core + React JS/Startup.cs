@@ -1,3 +1,4 @@
+using Divelog_.NET_core___React_JS.Context;
 using Divelog_.NET_core___React_JS.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +7,9 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Divelog_.NET_core___React_JS.Config;
 
 namespace Divelog_.NET_core___React_JS
 {
@@ -21,10 +25,24 @@ namespace Divelog_.NET_core___React_JS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IConnectionRepository, ConnectionRepository>();
+            services.AddScoped<ICustomTwitterRepository, CustomTwitterRepository>();
+            services.AddScoped<IJwtTokenProvider, JwtTokenProvider>();
 
             services.AddControllersWithViews();
 
-            services.AddSingleton<IConnectionRepository, ConnectionRepository>();
+            services.AddDbContext<DivelogContext>(options =>
+                options.UseSqlServer(@"Server=DESKTOP-UERIU9I\HUBERT;Database=Divelog;Trusted_Connection=True;"));
+
+            //services.AddSingleton<IConnectionRepository, ConnectionRepository>();
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+            services.AddMvc();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -47,6 +65,8 @@ namespace Divelog_.NET_core___React_JS
                 app.UseHsts();
             }
 
+            app.UseCors("MyPolicy");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -66,7 +86,7 @@ namespace Divelog_.NET_core___React_JS
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
                 }
             });
         }

@@ -50,9 +50,11 @@ class AvailableTrends extends React.Component {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
         }, () => {
-            fetch(`${BACKEND_API_URL}/twitter/available/closest/trends/${this.state.latitude}/${this.state.longitude}/${this.twitterJwtToken}`, {
+            fetch(`${BACKEND_API_URL}/twitter/available/closest/trends/${this.state.latitude}/${this.state.longitude}`, {
                 method: 'GET',
                 headers: {
+                    'Authorization': `${this.twitterJwtToken}`,
+                    'Access-Control-Allow-Origin': '*',
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }

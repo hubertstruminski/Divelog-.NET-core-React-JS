@@ -28,5 +28,18 @@ namespace Divelog_.NET_core___React_JS.Repositories
             _context.Connections.Add(connection);
             _context.SaveChanges();
         }
+
+        public void Update(Connection connection)
+        {
+            _context.Connections.Update(connection);
+            _context.SaveChanges();
+
+        }
+
+        public Connection findByUserIdOrTwitterUserId(long userId, long twitterUserId)
+        {
+            return _context.Connections.Where(c => c.UserID == userId || c.TwitterUserId == twitterUserId).Single();
+        }
     }
+
 }

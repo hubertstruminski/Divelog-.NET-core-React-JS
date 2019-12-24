@@ -21,5 +21,16 @@ namespace Divelog_.NET_core___React_JS.Repositories
             _context.CustomTwitters.Add(customTwitter);
             _context.SaveChanges();
         }
+
+        public CustomTwitter findByUser(Connection user)
+        {
+            return _context.CustomTwitters.Where(ct => ct.User == user).Single();
+        }
+
+        public void Update(CustomTwitter customTwitter)
+        {
+            _context.CustomTwitters.Update(customTwitter);
+            _context.SaveChanges();
+        }
     }
 }
