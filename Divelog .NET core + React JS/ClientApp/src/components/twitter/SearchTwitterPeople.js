@@ -51,14 +51,16 @@ class SearchTwitterPeople extends React.Component {
     getUsers() {
         let searchPeople = this.state.searchPeople;
         axios({ 
-            url: `${BACKEND_API_URL}/twitter/users/search/${this.state.searchPeople}/${this.twitterJwtToken}`,
+            url: `${BACKEND_API_URL}/twitter/users/search/${this.state.searchPeople}`,
             method: 'POST',
             body: searchPeople,
             headers: {
+                'Authorization': `${this.twitterJwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         }).then(response => {
+            console.log(response.data);
             if(this.isMountedSearchTwitterPeople) {
                 this.setState({ searchPeopleList: [] });
                 let counter = 0;
@@ -69,7 +71,7 @@ class SearchTwitterPeople extends React.Component {
                     const element = {
                         id: person.id,
                         name: person.name,
-                        pictureUrl: person['400x400ProfileImageURL'],
+                        pictureUrl: person['profileImageUrl400x400'],
                         screenName: person.screenName,
                         verified: person.verified
                     }

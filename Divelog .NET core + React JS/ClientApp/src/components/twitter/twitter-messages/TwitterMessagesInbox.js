@@ -38,9 +38,10 @@ class TwitterMessagesInbox extends React.Component {
         $(".twitter-messages-list-inbox").css({ "max-height": "100%" });
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/twitter/direct/messages/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/twitter/direct/messages`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

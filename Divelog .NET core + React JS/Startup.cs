@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Divelog_.NET_core___React_JS.Config;
+using Divelog_.NET_core___React_JS.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Divelog_.NET_core___React_JS
 {
@@ -28,6 +30,9 @@ namespace Divelog_.NET_core___React_JS
             services.AddScoped<IConnectionRepository, ConnectionRepository>();
             services.AddScoped<ICustomTwitterRepository, CustomTwitterRepository>();
             services.AddScoped<IJwtTokenProvider, JwtTokenProvider>();
+            services.AddScoped<IClaimsConverter, ClaimsConverter>();
+            services.AddScoped<IMarkerRepository, MarkerRepository>();
+            services.AddScoped<ILogbookRepository, LogbookRepository>();
 
             services.AddControllersWithViews();
 
@@ -42,7 +47,9 @@ namespace Divelog_.NET_core___React_JS
                        .AllowAnyHeader();
             }));
 
-            services.AddMvc();
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

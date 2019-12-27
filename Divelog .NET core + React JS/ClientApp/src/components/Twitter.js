@@ -39,38 +39,40 @@ class Twitter extends React.Component {
           );
         
 
-        fetch(`${BACKEND_API_URL}/getuserdata/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/getuserdata`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         })
         .then(response => {return response.json()})
         .then(jsonData => {
+            console.log(jsonData);
             if(this.isMountedTwitter) {
                 $(".tweets-likes-container").html("");
                 this.setState({
-                    accessToken: jsonData.accessToken,
-                    email: jsonData.email,
                     name: jsonData.name,
-                    twitterUserID: jsonData.twitterUserID,
                     pictureUrl: jsonData.pictureUrl,
-                    providerId: jsonData.providerId,
                     screenName: jsonData.screenName,
-                    tokenSecret: jsonData.tokenSecret
                 }, () => {
-                    window.twttr.widgets.createTimeline(
-                    {
-                        sourceType: 'likes',
-                        screenName: this.state.screenName
-                    },
-                    document.getElementsByClassName("tweets-likes-container")[0],
-                    {
-                        width: '100%',
-                        height: '100%',
-                        related: 'twitterdev,twitterapi'
-                    });
+                    window.twttr.ready(
+                        (twttr) => {
+                            twttr.widgets.createTimeline(
+                            {
+                                sourceType: 'likes',
+                                screenName: this.state.screenName
+                            },
+                            document.getElementsByClassName("tweets-likes-container")[0],
+                            {
+                                width: '100%',
+                                height: '100%',
+                                related: 'twitterdev,twitterapi'
+                            });
+                        }
+                    );
+                    
                 });
             }
         }).catch(err => {
@@ -111,7 +113,7 @@ class Twitter extends React.Component {
                         </div>
                         <div className="twitter-rr-container">
                             <div className="twitter-friends-container">
-                                {/* <TwitterFriendsList /> */}
+                                <TwitterFriendsList />
                             </div>
                         </div>
                     </div>

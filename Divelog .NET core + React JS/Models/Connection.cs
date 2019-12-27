@@ -19,5 +19,8 @@ namespace Divelog_.NET_core___React_JS.Models
         public DateTime LoggedAt { get; set; }
         public DateTime CreatedAt { get; set; }
         public CustomTwitter CustomTwitter { get; set; }
+        private List<Logbook> Logbooks { get; set; }
+        private List<Marker> Markers { get; set; }
+        private List<Topic> Topics { get; set; }
     }
 }

@@ -3,6 +3,7 @@ import { withTranslation } from 'react-i18next';
 import swal from 'sweetalert';
 import AuthService from '../../util/AuthService';
 import { BACKEND_API_URL } from '../../actions/types';
+import axios from 'axios';
 
 class DeleteTableButton extends React.Component {
     constructor(props) {
@@ -16,9 +17,10 @@ class DeleteTableButton extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
         let id = this.props.id;
 
-        fetch(`${BACKEND_API_URL}/logbook/${id}/${jwtToken}`, {
+        axios(`${BACKEND_API_URL}/logbook/${id}`, {
             method: 'DELETE',
             headers: {
+                "Authorization": `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

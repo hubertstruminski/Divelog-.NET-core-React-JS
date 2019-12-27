@@ -64,7 +64,6 @@ class LogIn extends React.Component {
 
     onTwitterClick() {
         //window.location.href = "https://api.divelog.eu/signin"
-        // window.location.href="http://localhost:5000/signin"
         window.location.href = "https://localhost:44321/twitter/signin";
     }
 

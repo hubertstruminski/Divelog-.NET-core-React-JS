@@ -18,9 +18,10 @@ class TwitterCategoriesCard extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`${BACKEND_API_URL}/getuserdata/${this.jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/getuserdata`, {
             method: 'GET',
             headers: {
+                'Authorization': `${this.jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

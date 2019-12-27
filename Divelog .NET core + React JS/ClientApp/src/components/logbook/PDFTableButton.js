@@ -50,9 +50,10 @@ class PDFTableButton extends React.Component {
         const id = this.props.id;
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/pdf/logbook/${id}/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/pdf/logbook/${id}`, {
             method: 'GET',
             headers: {
+                "Authorization": `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

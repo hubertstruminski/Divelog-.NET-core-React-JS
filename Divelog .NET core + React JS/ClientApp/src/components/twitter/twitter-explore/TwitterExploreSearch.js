@@ -28,10 +28,11 @@ class TwitterExploreSearch extends React.Component {
             let jwtToken = this.Auth.getRightSocialToken();
 
             axios({
-                url: `${BACKEND_API_URL}/twitter/search/tweets/${jwtToken}`,
+                url: `${BACKEND_API_URL}/twitter/search/tweets`,
                 method: 'POST',
-                data: this.state.search,
+                data: JSON.stringify(this.state.search),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }

@@ -37,9 +37,10 @@ class TwitterHome extends React.Component {
         $(".home-timeline-container").html("<div class='spinner-border text-primary twitter-explore-search-spinner' role='status'><span class='sr-only'>Loading...</span></div>");
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/getuserdata/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/getuserdata`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -48,33 +49,40 @@ class TwitterHome extends React.Component {
         .then(jsonData => {
             if(this.isMountedTwitter) {
                 this.setState({
-                    accessToken: jsonData.accessToken,
-                    email: jsonData.email,
                     name: jsonData.name,
-                    twitterUserID: jsonData.twitterUserID,
                     pictureUrl: jsonData.pictureUrl,
-                    providerId: jsonData.providerId,
                     screenName: jsonData.screenName,
-                    tokenSecret: jsonData.tokenSecret
                 }, () => {
-                    fetch(`${BACKEND_API_URL}/twitter/home/timeline/${jwtToken}`, {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        }
-                    }).then(response => {
-                        return response.text();
-                    }).then(text => {
-                        this.setState({ tweets: text }, () => {
-                            $(".home-timeline-container").html(text);
-                            $(".twitter-tweet").attr("data-width", "520px");
-                        });                      
-                    });
+                        fetch(`${BACKEND_API_URL}/twitter/home/timeline`, {
+                            method: 'GET',
+                            headers: {
+                                'Authorization': `${jwtToken}`,
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            }
+                        }).then(response => {
+                            return response.text();
+                        }).then(text => {
+                            let output = this.convertUnicode(text);
+                            console.log(output);
+                            this.setState({ tweets: output }, () => {
+                                $(".home-timeline-container").html(output);
+                                $(".twitter-tweet").attr("data-width", "520px");
+                            });
+                        });
+
                 });
             }
         }).catch(err => {
             console.log(err);
+        });
+    }
+
+    convertUnicode(input) { 
+        return input.replace(/\\u(\w\w\w\w)/g, function (a, b) {
+            var charcode = parseInt(b, 16);
+            var convertedWord = String.fromCharCode(charcode);
+            return convertedWord.replace("\n", "").replace("\"", "");
         });
     }
 

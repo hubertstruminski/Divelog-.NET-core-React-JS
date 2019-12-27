@@ -107,10 +107,21 @@ namespace Divelog_.NET_core___React_JS.Config
 
             Connection user = _connectionRepository.findByUserIdOrTwitterUserId(userId, twitterUserId);
 
+            if(user == null)
+            {
+                return false;
+            }
+
             long userCreatedAtMiliseconds = SetDateTimeToMiliseconds(user.CreatedAt.ToString());
             long userLoggedAtMiliseconds = SetDateTimeToMiliseconds(user.LoggedAt.ToString());
 
-            if (user.Email.Equals(email) && user.AccessToken.Equals(accessToken) && createdAtMiliseconds == userCreatedAtMiliseconds && loggedAtMiliseconds == userLoggedAtMiliseconds)
+            bool r1 = user.Email.Equals(email);
+            bool r2 = user.AccessToken.Equals(accessToken);
+            bool r3 = createdAtMiliseconds == userCreatedAtMiliseconds;
+            bool r4 = loggedAtMiliseconds == userLoggedAtMiliseconds;
+
+            //user.Email.Equals(email) && user.AccessToken.Equals(accessToken) && createdAtMiliseconds == userCreatedAtMiliseconds && loggedAtMiliseconds == userLoggedAtMiliseconds
+            if (user.Email.Equals(email) && user.AccessToken.Equals(accessToken) && createdAtMiliseconds == userCreatedAtMiliseconds)
             {
                 return true;
             }

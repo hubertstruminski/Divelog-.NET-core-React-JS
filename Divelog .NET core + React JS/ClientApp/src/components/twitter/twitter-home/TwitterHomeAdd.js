@@ -146,10 +146,11 @@ class TwitterHomeAdd extends React.Component {
             let jwtToken = this.Auth.getRightSocialToken();
 
             axios({
-                url: `${BACKEND_API_URL}/twitter/create/tweet/${jwtToken}`,
+                url: `${BACKEND_API_URL}/twitter/create/tweet`,
                 method: 'POST',
                 data: JSON.stringify(tweet),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }

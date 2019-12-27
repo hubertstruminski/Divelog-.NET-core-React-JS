@@ -32,14 +32,16 @@ class Logbook extends React.Component {
     componentDidMount() {
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/get/logbook/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/logbook`, {
             method: 'GET',
             headers: {
+                "Authorization": `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         }).then(response => { return response.json() })
-        .then(jsonData => {
+            .then(jsonData => {
+                console.log(jsonData);
             jsonData.map((jsonElement, index) => {
                 let time = this.ConvertTime.convertTime(jsonElement.entryTime, jsonElement.exitTime, false);
 
@@ -73,9 +75,10 @@ class Logbook extends React.Component {
     fetchLogbooks() {
         let jwtToken = this.Auth.getRightSocialToken(); 
 
-        fetch(`${BACKEND_API_URL}/get/logbook/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/logbook`, {
             method: 'GET',
             headers: {
+                "Authorization": `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

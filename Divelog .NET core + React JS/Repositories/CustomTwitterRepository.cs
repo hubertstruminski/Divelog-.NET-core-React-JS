@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Divelog_.NET_core___React_JS.Repositories
 {
@@ -24,7 +25,7 @@ namespace Divelog_.NET_core___React_JS.Repositories
 
         public CustomTwitter findByUser(Connection user)
         {
-            return _context.CustomTwitters.Where(ct => ct.User == user).Single();
+            return _context.CustomTwitters.Where(ct => ct.User == user).Include(ct => ct.User).SingleOrDefault();
         }
 
         public void Update(CustomTwitter customTwitter)

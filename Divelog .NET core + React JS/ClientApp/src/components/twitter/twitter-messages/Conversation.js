@@ -28,10 +28,11 @@ class Conversation extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
 
         axios({
-            url: `${BACKEND_API_URL}/twitter/direct/messages/specified/person/${jwtToken}`,
+            url: `${BACKEND_API_URL}/twitter/direct/messages/specified/person`,
             method: 'POST',
-            data: DM,
+            data: JSON.stringify(DM),
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

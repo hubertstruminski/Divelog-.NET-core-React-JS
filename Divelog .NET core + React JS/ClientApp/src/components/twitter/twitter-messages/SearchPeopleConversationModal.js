@@ -57,10 +57,11 @@ class SearchPeopleConversationModal extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
 
         axios({
-            url: `${BACKEND_API_URL}/twitter/direct/messages/search/people/${jwtToken}`,
+            url: `${BACKEND_API_URL}/twitter/direct/messages/search/people`,
             method: 'POST',
-            data: this.state.searchInput,
+            data: JSON.stringify(this.state.searchInput),
             headers: {
+                'Authorization': `${jwtToken}`,
                 'content-type': 'application/json'
             }
         }).then(response => {

@@ -61,6 +61,43 @@ namespace Divelog_.NET_core___React_JS.Migrations
                     b.ToTable("Connections");
                 });
 
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.CustomFile", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ObjectId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("PostId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Size")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("TopicId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("Files");
+                });
+
             modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.CustomTwitter", b =>
                 {
                     b.Property<long>("Id")
@@ -68,14 +105,14 @@ namespace Divelog_.NET_core___React_JS.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ScreenName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TokenSecret")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
-
-                    b.Property<string>("screenName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tokenSecret")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -85,6 +122,212 @@ namespace Divelog_.NET_core___React_JS.Migrations
                     b.ToTable("CustomTwitters");
                 });
 
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Logbook", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("AirTemperature")
+                        .HasColumnType("float");
+
+                    b.Property<double>("AverageDepth")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Ballast")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CylinderCapacity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DivingSuit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DivingType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EntryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExitTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GlovesType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("MarkerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("MaxDepth")
+                        .HasColumnType("float");
+
+                    b.Property<string>("PartnerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PartnerSurname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("Visibility")
+                        .HasColumnType("float");
+
+                    b.Property<string>("WaterEntryType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("WaterTemperature")
+                        .HasColumnType("float");
+
+                    b.Property<string>("WaterType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarkerId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Logbooks");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Marker", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Markers");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Post", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("TopicId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TopicId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Topic", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Displays")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LanguageForum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Topics");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.TopicVote", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long?>("TopicId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Vote")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TopicId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("TopicVotes");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.CustomFile", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Post", "Post")
+                        .WithMany("Files")
+                        .HasForeignKey("PostId");
+
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Topic", "Topic")
+                        .WithMany("Files")
+                        .HasForeignKey("TopicId");
+                });
+
             modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.CustomTwitter", b =>
                 {
                     b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
@@ -92,6 +335,53 @@ namespace Divelog_.NET_core___React_JS.Migrations
                         .HasForeignKey("Divelog_.NET_core___React_JS.Models.CustomTwitter", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Logbook", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Marker", "Marker")
+                        .WithMany("Logbooks")
+                        .HasForeignKey("MarkerId");
+
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Marker", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Post", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Topic", "Topic")
+                        .WithMany("Posts")
+                        .HasForeignKey("TopicId");
+
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.Topic", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Divelog_.NET_core___React_JS.Models.TopicVote", b =>
+                {
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Topic", "Topic")
+                        .WithMany("TopicVotes")
+                        .HasForeignKey("TopicId");
+
+                    b.HasOne("Divelog_.NET_core___React_JS.Models.Connection", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

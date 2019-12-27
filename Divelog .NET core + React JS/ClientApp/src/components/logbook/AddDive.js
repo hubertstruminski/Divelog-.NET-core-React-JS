@@ -186,35 +186,58 @@ class AddDive extends React.Component {
         if(this.validator.length === 0) {
             let jwtToken = this.Auth.getRightSocialToken();
 
-            const logbookObject = {
-                partnerName: this.state.partnerName,
-                partnerSurname: this.state.partnerSurname,
-                marker: this.state.marker,
-                entryTime: this.state.entryTime,
-                exitTime: this.state.exitTime,
-                averageDepth: this.state.averageDepth,
-                maxDepth: this.state.maxDepth,
-                visibility: this.state.visibility,
-                waterTemperature: this.state.waterTemperature,
-                airTemperature: this.state.airTemperature,    
-                cylinderCapacity: this.state.cylinderCapacity,
-                divingSuit: this.state.divingSuit,
-                waterType: this.state.waterType,
-                waterEntryType: this.state.waterEntryType,
-                ballast: this.state.ballast,
-                glovesType: this.state.glovesType,
-                divingType: this.state.divingType,
-                comment: this.state.comment
+            const logbookObject222 = {
+                PartnerName: this.state.partnerName,
+                PartnerSurname: this.state.partnerSurname,
+                Marker: this.state.marker,
+                EntryTime: this.state.entryTime,
+                ExitTime: this.state.exitTime,
+                AverageDepth: this.state.averageDepth,
+                MaxDepth: this.state.maxDepth,
+                Visibility: this.state.visibility,
+                WaterTemperature: this.state.waterTemperature,
+                AirTemperature: this.state.airTemperature,    
+                CylinderCapacity: this.state.cylinderCapacity,
+                DivingSuit: this.state.divingSuit,
+                WaterType: this.state.waterType,
+                WaterEntryType: this.state.waterEntryType,
+                Ballast: this.state.ballast,
+                GlovesType: this.state.glovesType,
+                DivingType: this.state.divingType,
+                Comment: this.state.comment
             }
 
-            axios({
+            const logbookObject = {
+                PartnerName: this.state.partnerName,
+                PartnerSurname: this.state.partnerSurname,
+                Marker: this.state.marker,
+                EntryTime: this.state.entryTime,
+                ExitTime: this.state.exitTime,
+                AverageDepth: this.state.averageDepth.toString(),
+                MaxDepth: this.state.maxDepth.toString(),
+                Visibility: this.state.visibility.toString(),
+                WaterTemperature: this.state.waterTemperature.toString(),
+                AirTemperature: this.state.airTemperature.toString(),
+                CylinderCapacity: this.state.cylinderCapacity,
+                DivingSuit: this.state.divingSuit,
+                WaterType: this.state.waterType,
+                WaterEntryType: this.state.waterEntryType,
+                Ballast: this.state.ballast.toString(),
+                GlovesType: this.state.glovesType,
+                DivingType: this.state.divingType,
+                Comment: this.state.comment
+            }
+
+            console.log(this.state.averageDepth);
+
+            axios(`${BACKEND_API_URL}/add/logbook`, {
                 method: 'POST',
-                url: `${BACKEND_API_URL}/add/logbook/${jwtToken}`,
-                data: logbookObject,
                 headers: {
+                    "Authorization": `${jwtToken}`,
                     "Accept": "application/json",
-                    "Content-type": "application/json"
-                }
+                    "Content-Type": "application/json"
+                },
+                data: JSON.stringify(logbookObject)
             }).then(response => {
                 if(response.status === 404) {
                     swal(this.props.t("error-404.title"), this.props.t("error-404.message"),"error");

@@ -61,9 +61,18 @@ class TwitterExplore extends React.Component {
     }
 
     addNewTweet(newTweets) {
-        this.setState({ searchTweets: newTweets }, () => {
+        let output = this.convertUnicode(newTweets);
+        this.setState({ searchTweets: output }, () => {
             $(".twitter-explore-search-tweets-container").html(this.state.searchTweets);
             $(".twitter-tweet").attr("data-width", "520px");
+        });
+    }
+
+    convertUnicode(input) {
+        return input.replace(/\\u(\w\w\w\w)/g, function (a, b) {
+            var charcode = parseInt(b, 16);
+            var convertedWord = String.fromCharCode(charcode);
+            return convertedWord.replace("\n", "").replace("\"", "");
         });
     }
 

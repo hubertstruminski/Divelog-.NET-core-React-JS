@@ -40,9 +40,10 @@ class GoogleMap extends React.Component {
         
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/get/markers/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/markers`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -72,9 +73,10 @@ class GoogleMap extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
 
         this.setState({ markers: [] }, () => {
-            fetch(`${BACKEND_API_URL}/get/markers/${jwtToken}`, {
+            fetch(`${BACKEND_API_URL}/get/markers`, {
                 method: 'GET',
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     'Accept': 'application/json',
                     'content-type': 'application/json'
                 }

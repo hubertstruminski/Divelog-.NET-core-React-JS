@@ -39,20 +39,19 @@ class HeaderIn extends React.Component {
             jwtToken = this.Auth.getToken();
         }
 
-        fetch(`${BACKEND_API_URL}/getuserdata/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/getuserdata`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         })
         .then(response => { return response.json() })
-        .then(jsonData => {
+            .then(jsonData => {
+                console.log(jsonData);
             this.setState({
-                accessToken: jsonData.accessToken,
-                email: jsonData.email,
                 name: jsonData.name,
-                userID: jsonData.userID,
                 pictureUrl: jsonData.pictureUrl
             });
         }).catch(err => {

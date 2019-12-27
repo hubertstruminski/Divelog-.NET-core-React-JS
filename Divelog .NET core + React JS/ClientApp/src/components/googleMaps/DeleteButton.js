@@ -16,9 +16,10 @@ class DeleteButton extends React.Component {
         let markerID = this.props.id;
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/delete/marker/${jwtToken}/${markerID}`, {
+        fetch(`${BACKEND_API_URL}/delete/marker/${markerID}`, {
             method: 'DELETE',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

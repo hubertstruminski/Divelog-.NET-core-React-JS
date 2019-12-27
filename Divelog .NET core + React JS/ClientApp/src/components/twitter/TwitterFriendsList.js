@@ -24,14 +24,16 @@ class TwitterFriendsList extends React.Component {
 
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/twitter/friends/list/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/twitter/friends/list`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
         }).then(response => { return response.json() })
         .then(json => {
+            console.log(json);
             if(this.isMountedFriendsList) {
                 if(json.length !== 0) {
                     json.map((friend, index) => {
@@ -39,7 +41,7 @@ class TwitterFriendsList extends React.Component {
                             id: friend.id,
                             screenName: friend.screenName,
                             name: friend.name,
-                            pictureUrl: friend["400x400ProfileImageURL"]
+                            pictureUrl: friend["profileImageUrl400x400"]
                         }
                         this.setState({ friends: this.state.friends.concat(element) });
                     });

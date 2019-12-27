@@ -4,6 +4,7 @@ import swal from 'sweetalert';
 import { withTranslation } from 'react-i18next';
 import AuthService from '../../util/AuthService';
 import { BACKEND_API_URL } from '../../actions/types';
+import axios from 'axios';
 
 class GoogleModal extends React.Component {
     constructor(props) {
@@ -26,20 +27,21 @@ class GoogleModal extends React.Component {
         let name = $("#name").val();
 
         const googleMarker = {
-            name: name,
-            latitude: this.props.latitude,
-            longitude: this.props.longitude
+            Name: name,
+            Latitude: this.props.latitude,
+            Longitude: this.props.longitude
         }
 
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/add/marker/${jwtToken}`, {
+        axios(`${BACKEND_API_URL}/add/marker`, {
             method: 'POST',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(googleMarker)
+            data: JSON.stringify(googleMarker)
         }).then(response => {
             if(response.status === 200) {
                 this.props.setFinishMarker();

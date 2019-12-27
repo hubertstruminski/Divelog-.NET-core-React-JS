@@ -55,9 +55,10 @@ class UpdateLogbook extends React.Component {
         let logbookId = this.props.match.params.id;
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/get/logbook/${jwtToken}/${logbookId}`, {
+        fetch(`${BACKEND_API_URL}/get/logbook/${logbookId}`, {
             method: 'GET',
             headers: {
+                "Authorization": `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -260,9 +261,10 @@ class UpdateLogbook extends React.Component {
 
             axios({
                 method: 'PUT',
-                url: `${BACKEND_API_URL}/edit/logbook/${logbookId}/${jwtToken}`,
-                data: logbookObject,
+                url: `${BACKEND_API_URL}/edit/logbook/${logbookId}`,
+                data: JSON.stringify(logbookObject),
                 headers: {
+                    "Authorization": `${jwtToken}`,
                     "Accept": "application/json",
                     "Content-type": "application/json"
                 }

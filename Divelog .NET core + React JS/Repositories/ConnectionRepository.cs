@@ -38,7 +38,12 @@ namespace Divelog_.NET_core___React_JS.Repositories
 
         public Connection findByUserIdOrTwitterUserId(long userId, long twitterUserId)
         {
-            return _context.Connections.Where(c => c.UserID == userId || c.TwitterUserId == twitterUserId).Single();
+            return _context.Connections.Where(c => c.UserID == userId || c.TwitterUserId == twitterUserId).SingleOrDefault();
+        }
+
+        public Connection findByUserIdOrTwitterUserIdOrEmail(long userId, long twitterUserId, string email)
+        {
+            return _context.Connections.Where(c => c.UserID == userId || c.TwitterUserId == twitterUserId || c.Email == email).SingleOrDefault();
         }
     }
 

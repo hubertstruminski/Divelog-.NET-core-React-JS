@@ -48,9 +48,10 @@ class GoogleLogbookMap extends React.Component {
 
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/get/markers/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/markers`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
