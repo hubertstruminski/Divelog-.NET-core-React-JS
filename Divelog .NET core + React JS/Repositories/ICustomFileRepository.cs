@@ -10,5 +10,8 @@ namespace Divelog_.NET_core___React_JS.Repositories
     {
         List<CustomFile> GetAllByTopic(Topic topic);
         List<CustomFile> GetAllByPost(Post post);
+        void Save(CustomFile file);
+        void Update(CustomFile file);
+        void Delete(CustomFile file);
     }
 }

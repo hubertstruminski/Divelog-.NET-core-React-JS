@@ -34,5 +34,23 @@ namespace Divelog_.NET_core___React_JS.Repositories
                 .Include(f => f.Topic)
                 .ToList();
         }
+
+        public void Save(CustomFile file)
+        {
+            _context.Files.Add(file);
+            _context.SaveChanges();
+        }
+        
+        public void Update(CustomFile file)
+        {
+            _context.Files.Update(file);
+            _context.SaveChanges();
+        }
+        
+        public void Delete(CustomFile file)
+        {
+            _context.Files.Remove(file);
+            _context.SaveChanges();
+        }
     }
 }

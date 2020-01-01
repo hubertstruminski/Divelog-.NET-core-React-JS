@@ -33,5 +33,23 @@ namespace Divelog_.NET_core___React_JS.Repositories
                 .Include(topicVote => topicVote.Topic)
                 .SingleOrDefault();
         }
+
+        public void Save(TopicVote topicVote)
+        {
+            _context.TopicVotes.Add(topicVote);
+            _context.SaveChanges();
+        }
+
+        public void Update(TopicVote topicVote)
+        {
+            _context.TopicVotes.Update(topicVote);
+            _context.SaveChanges();
+        }
+
+        public void Delete(TopicVote topicVote)
+        {
+            _context.TopicVotes.Remove(topicVote);
+            _context.SaveChanges();
+        }
     }
 }

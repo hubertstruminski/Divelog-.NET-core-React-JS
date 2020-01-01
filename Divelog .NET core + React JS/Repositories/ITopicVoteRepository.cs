@@ -10,5 +10,8 @@ namespace Divelog_.NET_core___React_JS.Repositories
     {
         TopicVote GetByTopic(Topic topic);
         TopicVote GetByTopicAndUser(Topic topic, Connection user);
+        void Save(TopicVote topicVote);
+        void Update(TopicVote topicVote);
+        void Delete(TopicVote topicVote);
     }
 }

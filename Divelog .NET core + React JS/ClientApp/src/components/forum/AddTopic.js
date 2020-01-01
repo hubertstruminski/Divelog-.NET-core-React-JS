@@ -115,7 +115,6 @@ class AddTopic extends React.Component {
                 message: this.state.message,
                 likes: 0,
                 languageForum: forumType,
-                jwtToken: jwtToken,
                 files: this.state.successFiles
             }
 
@@ -124,6 +123,7 @@ class AddTopic extends React.Component {
                 method: 'POST',
                 data: JSON.stringify(topicDto),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }

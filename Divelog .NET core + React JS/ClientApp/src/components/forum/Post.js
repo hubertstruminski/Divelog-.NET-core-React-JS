@@ -41,9 +41,10 @@ class Post extends React.Component {
     componentDidMount() {
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/getuserdata/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/getuserdata`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -124,9 +125,10 @@ class Post extends React.Component {
         let postId = this.props.id;
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/delete/post/${postId}/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/delete/post/${postId}`, {
             method: 'DELETE',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json, text/plain, */*',
                 'content-type': 'application/json'
             }
@@ -175,9 +177,10 @@ class Post extends React.Component {
                         
                         axios({
                             method: 'PUT',
-                            url: `${BACKEND_API_URL}/post/${postId}/${jwtToken}`,
-                            data: updatedPost,
+                            url: `${BACKEND_API_URL}/post/${postId}`,
+                            data: JSON.stringify(updatedPost),
                             headers: {
+                                'Authorization': `${jwtToken}`,
                                 "Accept": "application/json",
                                 "Content-type": "application/json"
                             }

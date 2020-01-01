@@ -11,5 +11,9 @@ namespace Divelog_.NET_core___React_JS.Repositories
         List<Post> GetAllByTopicOrderByCreatedAtAsc(Topic topic);
         Post GetByIdAndUser(long id, Connection user);
         List<Post> GetAllByTopic(Topic topic);
+        void Save(Post post);
+        void Update(Post post);
+        void Delete(Post post);
+        void DeleteById(long postId);
     }
 }

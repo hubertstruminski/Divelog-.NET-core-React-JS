@@ -29,12 +29,30 @@ namespace Divelog_.NET_core___React_JS.Repositories
 
         public List<Topic> FindAllAndOrderByCreatedAtAsc()
         {
-            return _context.Topics.OrderBy(topic => topic.CreatedAt).ToList();
+            return _context.Topics.OrderBy(topic => topic.CreatedAt).Include(topic => topic.User).ToList();
         }
 
         public List<Topic> FindAllAndOrderByLikeDesc()
         {
-            return _context.Topics.OrderByDescending(topic => topic.Likes).ToList();
+            return _context.Topics.OrderByDescending(topic => topic.Likes).Include(topic => topic.User).ToList();
+        }
+
+        public void Save(Topic topic)
+        {
+            _context.Topics.Add(topic);
+            _context.SaveChanges();
+        }
+        
+        public void Update(Topic topic)
+        {
+            _context.Topics.Update(topic);
+            _context.SaveChanges();
+        }
+       
+        public void Delete(Topic topic)
+        {
+            _context.Topics.Remove(topic);
+            _context.SaveChanges();
         }
     }
 }

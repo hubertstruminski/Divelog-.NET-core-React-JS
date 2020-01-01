@@ -32,9 +32,10 @@ class Topic extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
         let topicId = this.props.id;
 
-        fetch(`${BACKEND_API_URL}/get/topic/number/comments/${topicId}/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/topic/number/comments/${topicId}`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }
@@ -88,9 +89,10 @@ class Topic extends React.Component {
             let isUpVoted = true;    
             axios({
                 method: 'PUT',
-                url: `${BACKEND_API_URL}/topic/likes/vote/${this.props.id}/${jwtToken}`,
-                data: isUpVoted,
+                url: `${BACKEND_API_URL}/topic/likes/vote/${this.props.id}`,
+                data: JSON.stringify(isUpVoted),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     "Accept": "application/json",
                     "Content-type": "application/json"
                 }
@@ -122,9 +124,10 @@ class Topic extends React.Component {
             let isUpVoted = false;
             axios({
                 method: 'PUT',
-                url: `${BACKEND_API_URL}/topic/likes/vote/${this.props.id}/${jwtToken}`,
-                data: isUpVoted,
+                url: `${BACKEND_API_URL}/topic/likes/vote/${this.props.id}`,
+                data: JSON.stringify(isUpVoted),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     "Accept": "application/json",
                     "Content-type": "application/json"
                 }
@@ -154,9 +157,10 @@ class Topic extends React.Component {
         let jwtToken = this.Auth.getRightSocialToken();
         let topicId = this.props.id;
         
-        fetch(`${BACKEND_API_URL}/get/topic/number/comments/${topicId}/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/get/topic/number/comments/${topicId}`, {
             method: 'GET',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json, text/plain, */*',
                 'content-type': 'application/json'
             }

@@ -33,6 +33,10 @@ namespace Divelog_.NET_core___React_JS
             services.AddScoped<IClaimsConverter, ClaimsConverter>();
             services.AddScoped<IMarkerRepository, MarkerRepository>();
             services.AddScoped<ILogbookRepository, LogbookRepository>();
+            services.AddScoped<ICustomFileRepository, CustomFileRepository>();
+            services.AddScoped<ITopicRepository, TopicRepository>();
+            services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ITopicVoteRepository, TopicVoteRepository>();
 
             services.AddControllersWithViews();
 

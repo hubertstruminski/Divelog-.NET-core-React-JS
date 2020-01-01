@@ -12,5 +12,8 @@ namespace Divelog_.NET_core___React_JS.Repositories
         Topic GetByIdAndUser(long id, Connection user);
         List<Topic> FindAllAndOrderByCreatedAtAsc();
         List<Topic> FindAllAndOrderByLikeDesc();
+        void Save(Topic topic);
+        void Update(Topic topic);
+        void Delete(Topic topic);
     }
 }

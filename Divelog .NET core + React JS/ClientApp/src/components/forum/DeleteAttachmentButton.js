@@ -18,9 +18,10 @@ class DeleteAttachmentButton extends React.Component {
         let fileId = this.props.id;
         let jwtToken = this.Auth.getRightSocialToken();
 
-        fetch(`${BACKEND_API_URL}/delete/post/file/${fileId}/${jwtToken}`, {
+        fetch(`${BACKEND_API_URL}/delete/post/file/${fileId}`, {
             method: 'DELETE',
             headers: {
+                'Authorization': `${jwtToken}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }

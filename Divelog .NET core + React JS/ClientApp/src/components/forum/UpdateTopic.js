@@ -155,9 +155,10 @@ class UpdateTopic extends React.Component {
 
             axios({
                 method: 'PUT',
-                url: `${BACKEND_API_URL}/update/topic/${topicId}/${jwtToken}`,
-                data: updatedTopic,
+                url: `${BACKEND_API_URL}/update/topic/${topicId}`,
+                data: JSON.stringify(updatedTopic),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     "Accept": "application/json",
                     "Content-type": "application/json"
                 }

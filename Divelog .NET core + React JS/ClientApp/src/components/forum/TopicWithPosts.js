@@ -47,6 +47,7 @@ class TopicWithPosts extends React.Component {
             }
         }).then(response => response.json())
         .then(jsonData => {
+            console.log(jsonData);
             this.files = [];
 
             jsonData.files.map((file, index) => {
@@ -107,14 +108,16 @@ class TopicWithPosts extends React.Component {
             }, () => {
                 let jwtToken = this.Auth.getRightSocialToken();
 
-                fetch(`/getuserdata/${jwtToken}`, {
+                fetch(`${BACKEND_API_URL}/getuserdata`, {
                     method: 'GET',
                     headers: {
+                    'Authorization': `${jwtToken}`,
                     'content-type': 'application/json'
                     }
                 })
                 .then(response => { return response.json() })
                 .then(jsonData => {
+                    console.log(jsonData);
                     this.setState({ email: jsonData.email }, () => {
                         this.state.posts.map((post, index) => {
                             if(post.user.email === this.state.email) {
@@ -146,7 +149,8 @@ class TopicWithPosts extends React.Component {
                     'Content-Type': 'application/json'
                 }
             }).then(response => response.json())
-            .then(jsonData => {
+                .then(jsonData => {
+                    console.log(jsonData);
                 this.files = [];
     
                 jsonData.files.map((file, index) => {
@@ -207,9 +211,10 @@ class TopicWithPosts extends React.Component {
                 }, () => {
                     let jwtToken = this.Auth.getRightSocialToken();
     
-                    fetch(`${BACKEND_API_URL}/getuserdata/${jwtToken}`, {
+                    fetch(`${BACKEND_API_URL}/getuserdata`, {
                         method: 'GET',
                         headers: {
+                            'Authorization': `${jwtToken}`,
                             'Accept': 'application/json',
                             'Content-Type': 'application/json'
                         }

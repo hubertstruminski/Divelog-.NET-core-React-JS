@@ -56,12 +56,13 @@ class Forum extends React.Component {
                 'Content-Type': 'application/json'
             }
         }).then(response => {return response.json()})
-        .then(jsonData => {
+            .then(jsonData => {
+                console.log(jsonData);
             let countPolish = 0;
             let countGermany = 0;
             let countEnglish = 0;
             jsonData.map((topic, index) => {
-                if(topic.languageForum === 'polish') {
+                if(topic.languageForum === 'POLISH') {
                     let time = this.ConvertTime.convertTime(topic.createdAt, null, false);
 
                     const element = {
@@ -75,7 +76,7 @@ class Forum extends React.Component {
                     countPolish++
                 }
 
-                if(topic.languageForum === 'english') {
+                if(topic.languageForum === 'ENGLISH') {
                     let time = this.ConvertTime.convertTime(topic.createdAt, null, false);
 
                     const element = {
@@ -89,7 +90,7 @@ class Forum extends React.Component {
                     countEnglish++
                 }
 
-                if(topic.languageForum === 'germany') {
+                if(topic.languageForum === 'GERMANY') {
                     let time = this.ConvertTime.convertTime(topic.createdAt, null, false);
 
                     const element = {

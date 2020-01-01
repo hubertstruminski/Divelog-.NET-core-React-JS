@@ -95,7 +95,6 @@ class AddPosts extends React.Component {
             const post = {
                 message: this.state.message,
                 topicId: topicId,
-                jwtToken: jwtToken,
                 files: this.state.successFiles,
             }
 
@@ -104,6 +103,7 @@ class AddPosts extends React.Component {
                 method: 'POST',
                 data: JSON.stringify(post),
                 headers: {
+                    'Authorization': `${jwtToken}`,
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }

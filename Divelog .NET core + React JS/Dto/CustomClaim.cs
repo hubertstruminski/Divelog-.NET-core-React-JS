@@ -10,5 +10,7 @@ namespace Divelog_.NET_core___React_JS.Dto
         public string Name { get; set; }
         public string PictureUrl { get; set; }
         public string ScreenName { get; set; }
+        public string Email { get; set; }
     }
 }
+

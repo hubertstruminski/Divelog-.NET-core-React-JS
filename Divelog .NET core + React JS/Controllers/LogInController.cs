@@ -35,6 +35,7 @@ namespace Divelog_.NET_core___React_JS.Controllers
                 customClaim.Name = identity.FindFirst("name").Value.ToString();
                 customClaim.PictureUrl = identity.FindFirst("pictureUrl").Value.ToString();
                 customClaim.ScreenName = identity.FindFirst("screenName").Value.ToString();
+                customClaim.Email = identity.FindFirst(ClaimTypes.Email).Value.ToString();
 
                 return Json(customClaim);
             }
